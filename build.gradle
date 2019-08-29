@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+group 'com.mebank.sample'
+version '1.0-SNAPSHOT'
+
+mainClassName = 'com.mebank.sample.router.StatesRestAPI'
+
+version = '3.8.0'
+
+dependencies {
+
+    compile "io.vertx:vertx-core:$version"
+    compile "io.vertx:vertx-web:3.5.1"
+    compile "io.vertx:vertx-web-client:3.5.1"
+    compile "io.vertx:vertx-rx-java2:3.5.0"
+    compile "com.fasterxml.jackson.core:jackson-databind:2.8.7"
+    compile ('com.maxmind.geoip2:geoip2:2.8.0'){
+        exclude group: 'com.fasterxml.jackson.core', module: 'jackson-databind'
+    }
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
