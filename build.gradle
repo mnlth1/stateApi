@@ -8,10 +8,10 @@ repositories {
     jcenter()
 }
 
-group 'com.mebank.sample'
+group 'com.vertx.sample'
 version '1.0-SNAPSHOT'
 
-mainClassName = 'com.mebank.sample.router.StatesRestAPI'
+mainClassName = 'com.sample.router.StatesRestAPI'
 
 version = '3.8.0'
 
